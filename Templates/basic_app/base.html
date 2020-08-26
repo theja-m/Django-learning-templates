@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Base</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'index' %}" class="navbar_brand">Brand</a></li>
+                    <li><a href="{% url 'basic_app:other' %}" class="navbar-link">Other</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            {% block body_block %}
+            <!-- Anything inside this wont be inherited -->
+            {% endblock %}
+        </div>
+    </body>
+</html>
